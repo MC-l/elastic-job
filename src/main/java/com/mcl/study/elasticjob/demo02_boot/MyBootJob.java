@@ -24,7 +24,7 @@ public class MyBootJob implements SimpleJob {
         // 分片规则："0=a,1=b,2=c"
 
         System.out.println("分片项："+shardingContext.getShardingItem());
-        // shardingContext.toString() ==> ShardingContext(jobName=myJob, taskId=myJob@-@0@-@READY@-@192.168.2.27@-@40288, shardingTotalCount=1, jobParameter=, shardingItem=0, shardingParameter=null)
+        // ShardingContext(jobName=com.mcl.study.elasticjob.demo02_boot.MyBootJob, taskId=com.mcl.study.elasticjob.demo02_boot.MyBootJob@-@0,2@-@READY@-@192.168.2.27@-@63568, shardingTotalCount=3, jobParameter=, shardingItem=2, shardingParameter=c)
         String shardingParameter = shardingContext.getShardingParameter();
         System.out.println("分片参数："+shardingParameter);
         System.out.println("任务执行："+shardingContext.toString());
