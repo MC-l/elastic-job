@@ -72,6 +72,6 @@ public class MyBootJobConfig {
     private MyBootJob myBootJob;
     @Bean(initMethod = "init")
     public SpringJobScheduler springJobScheduler(CoordinatorRegistryCenter center){
-        return new SpringJobScheduler(myBootJob,center,liteJobConfiguration(myBootJob.getClass(),"0/3 * * * * ?",1,null));
+        return new SpringJobScheduler(myBootJob,center,liteJobConfiguration(myBootJob.getClass(),"0/3 * * * * ?",3,"0=a,1=b,2=c"));
     }
 }
