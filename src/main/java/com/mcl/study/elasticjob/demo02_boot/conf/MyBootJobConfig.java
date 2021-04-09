@@ -41,7 +41,7 @@ public class MyBootJobConfig {
         // 创建注册中心
         ZookeeperRegistryCenter center = new ZookeeperRegistryCenter(config);
         // 初始化方法放到 @Bean(initMethod=方法名)
-        center.init();
+        //center.init();
         return center;
     }
 
